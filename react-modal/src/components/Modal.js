@@ -1,7 +1,8 @@
 import React, { useRef, useCallback, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
-import {MdClose} from 'react-icons/md'
+import { MdClose } from 'react-icons/md'
+
 
 const Background = styled.div`
     width: 100%;
@@ -101,7 +102,7 @@ const Modal = ({ showModal, openModal,setShowModal }) => {
                 <Background ref={modalRef} onClick={closeModal}>
                     <animated.div style={animation}>
                     <ModalWrapper showModal={showModal}>
-                        <ModalImg src={require('./modal.jpg')} alt='camera' />
+                        <ModalImg src={require('./modal.jpg').default} alt='camera' />
                         <ModalContent>
                             <h1>Are you ready?</h1>
                             <p>Get exclusive access to our next launch</p>
